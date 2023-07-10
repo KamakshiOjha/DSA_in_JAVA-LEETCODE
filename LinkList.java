@@ -2,7 +2,7 @@
     private Node head;
     private Node tail;
     private int length;
-
+  
     class Node{
         int value;
         Node next;
@@ -10,7 +10,7 @@
             this.value = value;
         }
     }
-
+//print list
     public void printList(){
         Node temp = head;
         while(temp!= null){
@@ -20,12 +20,14 @@
     }
 
    
-
+//show data
     public void getHead(){
         System.out.println("head: " + head.value );
         System.out.println("tail: " + tail.value );
         System.out.println("length: " + length );
     }
+
+ //add element in the list   
     public void append(int value){
         Node n = new Node(value);
         if(length == 0){
@@ -35,12 +37,47 @@
         else{
             tail.next = n;
             tail = n;
+            
 
         }
         length++;
     }
+// remove element from end
+    public Node remove(){
+        if (length== 0) return null;
+        Node pre = head;
+        Node temp = head;
+        while(temp!=null){
+            pre=temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length--;
+        if(length == 0){
+            head = null;
+            tail= null;
+        }
+        
+        return temp;
+
+    }
+//add element at start
+    public void prepend(int value){
+        Node n = new Node(value);
+        if (length == 0){
+            n.next = head;
+            head = n;
+            tail = n;
+        }
+        n.next = head;
+        head = n;
+        printList();
 
 
+    }
+
+//constructor
     LinkedList(int value){
         Node newNode = new Node(value);
         head = newNode;
