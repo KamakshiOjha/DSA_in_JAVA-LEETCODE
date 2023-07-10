@@ -76,7 +76,18 @@
 
 
     }
+//remove element from start of linkedlist
 
+    public void removeFirst(){
+        if (length == 0){
+            System.out.println("nothing to remove");
+        }
+        Node temp = null;
+        temp = head.next; 
+        head.next = null;
+        head = temp;
+        printList();
+    }
 //constructor
     LinkedList(int value){
         Node newNode = new Node(value);
