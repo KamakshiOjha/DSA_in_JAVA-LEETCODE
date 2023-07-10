@@ -1,6 +1,6 @@
 public class Main{
     public static void main(String[] args){
-        LinkedList2 l = new LinkedList2(4);
+        LinkedList l = new LinkedList(4);
         l.append(7);
         l.prepend(2);
 
