@@ -102,6 +102,21 @@
         printList();
 
     }
+
+// set a value to a particular index
+
+    public void setElement(int index, int value1){
+        if(index < 0 || index >= length ){
+            System.out.println("nothing to remove");
+        }
+        Node temp = head;
+        for(int i = 0; i<index ; i++){
+            temp = temp.next;
+        }
+        temp.value = value1;
+        printList();
+
+    }
 //constructor
     LinkedList(int value){
         Node newNode = new Node(value);
