@@ -102,6 +102,18 @@
         printList();
 
     }
+    // or
+        public Node get(int index){
+        if(index < 0 || index >= length ){
+            return null;
+        }
+        Node temp = head;
+        for(int i = 0; i<index ; i++){
+            temp = temp.next;
+        }
+        return temp;
+
+    }
 
 // set a value to a particular index
 
@@ -117,6 +129,31 @@
         printList();
 
     }
+
+//insert a value at particular index
+    public void insertElement(int index,int value){
+        if(index < 0 || index > length ){
+            System.out.println("cannot insert");
+        }
+        if(index == 0){
+            prepend(value);
+            printList();
+        }
+        if(index == length){
+            append(value);
+            printList();
+        }
+        Node newNode = new Node(value);
+        Node temp = get(index -1);
+        newNode.next = temp.next;
+        temp.next = newNode;
+        length ++;
+        printList();
+
+
+
+    }
+ 
 //constructor
     LinkedList(int value){
         Node newNode = new Node(value);

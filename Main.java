@@ -10,16 +10,19 @@ public class Main{
         // System.out.println("after removal of first element");
         // l.removeFirst();
 
+        // System.out.println("before");
+        // l.printList();
+        // System.out.println("after exchange");
+        // l.setElement(2, 10);
+
+        
+        // System.out.println(l.remove());
+        // System.out.println(l.remove());
+
         System.out.println("before");
         l.printList();
-        System.out.println("after exchange");
-        l.setElement(2, 10);
-
-        
-        // System.out.println(l.remove());
-        // System.out.println(l.remove());
-
-        
+        System.out.println("after insert");
+        l.insertElement(2,45);
 
 
     }
