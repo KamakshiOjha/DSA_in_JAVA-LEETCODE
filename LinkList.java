@@ -150,7 +150,27 @@
         length ++;
         printList();
 
+    }
 
+//remove a value at particular index
+public void removeElement(int index){
+        if(index < 0 || index > length ){
+            System.out.println("cannot insert");
+        }
+        if(index == 0){
+            removeFirst();
+            printList();
+        }
+        if(index == length){
+            remove();
+            printList();
+        }
+        Node newNode = get(index);
+        Node temp = get(index-1);
+        temp.next = newNode.next;
+        length --;
+        System.out.println("element removed is:"+ " "+newNode.value);
+        printList();
 
     }
  

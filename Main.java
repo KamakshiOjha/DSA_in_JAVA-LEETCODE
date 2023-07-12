@@ -19,11 +19,16 @@ public class Main{
         // System.out.println(l.remove());
         // System.out.println(l.remove());
 
+        // System.out.println("before");
+        // l.printList();
+        // System.out.println("after insert");
+        // l.insertElement(2,45);
+
+        
         System.out.println("before");
         l.printList();
-        System.out.println("after insert");
-        l.insertElement(2,45);
-
+        System.out.println("after remove");
+        l.removeElement(1);
 
     }
 }
