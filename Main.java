@@ -25,10 +25,15 @@ public class Main{
         // l.insertElement(2,45);
 
         
+        // System.out.println("before");
+        // l.printList();
+        // System.out.println("after remove");
+        // l.removeElement(1);
+
+
         System.out.println("before");
         l.printList();
-        System.out.println("after remove");
-        l.removeElement(1);
-
+        System.out.println("after reverse");
+        l.reverse();
     }
 }
