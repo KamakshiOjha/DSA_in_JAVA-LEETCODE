@@ -4,5 +4,9 @@ public class Main_DoublyLL {
         l.append(4);
         l.append(5);
         l.printLL();
+        System.out.println("element removed: " );
+        l.remove();
+        l.printLL();
+
     }
 }

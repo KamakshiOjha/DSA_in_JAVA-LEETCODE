@@ -41,7 +41,17 @@ public class DoublyLL {
         }
         length ++;
 
-        
+    }
+    public void remove(){
+        if(length == 0){
+            System.out.println("nothing to remove");
+        }
+        Node temp = tail;
+        tail= tail.prev;
+        tail.next = null;
+        temp.prev = null;
+        System.out.println(temp.value); 
+        length--;
 
     }
     
