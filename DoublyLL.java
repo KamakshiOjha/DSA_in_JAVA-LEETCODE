@@ -52,6 +52,9 @@ public class DoublyLL {
         temp.prev = null;
         System.out.println(temp.value); 
         length--;
+        if(length == 0){
+            System.out.println("last element was removed");
+        }
 
     }
     
