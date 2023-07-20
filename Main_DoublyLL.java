@@ -4,8 +4,12 @@ public class Main_DoublyLL {
         l.append(4);
         l.append(5);
         l.printLL();
-        System.out.println("element removed: " );
-        l.remove();
+        // System.out.println("element removed: " );
+        // l.remove();
+        System.out.println("before prepend");
+        l.printLL();
+        System.out.println("after prepend");
+        l.prepend(5);
         l.printLL();
 
     }

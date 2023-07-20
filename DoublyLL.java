@@ -27,7 +27,7 @@ public class DoublyLL {
             temp = temp.next;
         }
     }
-
+// add element to last/end
     public void append(int value){
         Node n = new Node(value);
         if(length == 0){
@@ -42,6 +42,8 @@ public class DoublyLL {
         length ++;
 
     }
+
+    // remove element from last
     public void remove(){
         if(length == 0){
             System.out.println("nothing to remove");
@@ -54,6 +56,20 @@ public class DoublyLL {
         length--;
         if(length == 0){
             System.out.println("last element was removed");
+        }
+
+    }
+    public void prepend(int value){
+        Node temp = new Node(value);
+        if(length == 0){
+            head = temp;
+            tail = temp;
+            length = 1;
+        }else{
+            temp.next = head;
+            head.prev = temp;
+            head = temp;
+            length++;
         }
 
     }
