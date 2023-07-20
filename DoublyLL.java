@@ -59,6 +59,8 @@ public class DoublyLL {
         }
 
     }
+
+//add element to start
     public void prepend(int value){
         Node temp = new Node(value);
         if(length == 0){
@@ -72,6 +74,19 @@ public class DoublyLL {
             length++;
         }
 
+    }
+
+//remove element from start
+    public void removeFirst(){
+        if(length == 0){
+            System.out.println("nothing to remove");
+        }else{
+            Node temp = head;
+            head = head.next;
+            temp.next = null;
+            head.prev = null;
+            length--;
+        }
     }
     
 }
