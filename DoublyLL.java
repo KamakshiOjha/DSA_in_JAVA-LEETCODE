@@ -80,7 +80,12 @@ public class DoublyLL {
     public void removeFirst(){
         if(length == 0){
             System.out.println("nothing to remove");
-        }else{
+        }
+        if(length == 1){
+            head = null;
+            tail=null;
+        }
+        else{
             Node temp = head;
             head = head.next;
             temp.next = null;
