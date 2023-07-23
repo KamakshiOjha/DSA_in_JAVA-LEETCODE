@@ -93,5 +93,26 @@ public class DoublyLL {
             length--;
         }
     }
+
+    // get element by index 
+    public void getElement(int index){
+        if(index < 0 || index >= length){
+            System.out.println("no element to display");
+        }
+        Node temp = head;
+        if(index < length/2){
+            for(int i = 0; i < index; i++){
+                temp = temp.next;
+            }
+            System.out.println(temp.value);
+        }
+        else{
+            temp = tail;
+            for(int i = length-1;i>index;i--){
+                temp = temp.prev;
+            }System.out.println(temp.value);
+
+        }
+    }
     
 }
