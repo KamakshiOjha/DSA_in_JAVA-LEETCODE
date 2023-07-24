@@ -26,10 +26,16 @@ public class Main_DoublyLL {
         // System.out.println(l.setElement(1, 25));
         // l.printLL();
 
+        // System.out.println("before");
+        // l.printLL();
+        // System.out.println("after");
+        // System.out.println(l.insertElement(1, 25));
+        // l.printLL();
+
         System.out.println("before");
         l.printLL();
         System.out.println("after");
-        System.out.println(l.insertElement(1, 25));
+        System.out.println(l.removeElement(1));
         l.printLL();
 
 

@@ -125,6 +125,7 @@ public class DoublyLL {
         return false;
     }
 
+    //insert element at particular index
     public boolean insertElement(int index,int value){
         if(index > length || index < 0){
             return false;
@@ -147,9 +148,29 @@ public class DoublyLL {
         after.prev = newNode;
         length++;
         return true;
+    }
 
-
-
+    //remove element from particular index
+    public boolean removeElement(int index){
+        if(index > length || index < 0){
+            return false;
+        }
+        else if(index == 0){
+            removeFirst();
+            return true;
+        }
+        else if(index == length){
+            remove();
+            return true;
+        }
+        Node temp = getElement(index);
+        Node before = getElement(index -1);
+        Node after = temp.next;
+        before.next = after;
+        after.prev = before;
+        temp.prev = null;
+        temp.next = null;
+        return true;
     }
     
 }
