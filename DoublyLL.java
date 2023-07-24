@@ -95,24 +95,34 @@ public class DoublyLL {
     }
 
     // get element by index 
-    public void getElement(int index){
+    public Node getElement(int index){
         if(index < 0 || index >= length){
-            System.out.println("no element to display");
+            return null;
         }
         Node temp = head;
         if(index < length/2){
             for(int i = 0; i < index; i++){
                 temp = temp.next;
             }
-            System.out.println(temp.value);
+            return temp;
         }
         else{
             temp = tail;
             for(int i = length-1;i>index;i--){
                 temp = temp.prev;
-            }System.out.println(temp.value);
+            }return temp;
 
         }
+    }
+
+    //set element at particular index
+    public boolean setElement(int index, int value){
+        Node temp = getElement(index);
+        if(temp!=null){
+            temp.value = value;
+            return true;
+        }
+        return false;
     }
     
 }

@@ -18,7 +18,14 @@ public class Main_DoublyLL {
         // l.removeFirst();
         // l.printLL();
 
-        l.getElement(1);
+        // System.out.println(l.getElement(1));
+
+        System.out.println("before");
+        l.printLL();
+        System.out.println("after");
+        System.out.println(l.setElement(1, 25));
+        l.printLL();
+
 
     }
 }
