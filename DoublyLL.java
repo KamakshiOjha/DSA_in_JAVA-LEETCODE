@@ -124,5 +124,32 @@ public class DoublyLL {
         }
         return false;
     }
+
+    public boolean insertElement(int index,int value){
+        if(index > length || index < 0){
+            return false;
+        }
+        else if(index == 0 ){
+            prepend(value);
+            return true;
+        }
+        else if(index == length){
+            append(value);
+            return true;
+
+        }
+        Node newNode = new Node(value);
+        Node before = getElement(index - 1);
+        Node after = before.next;
+        before.next = newNode;
+        newNode.next = after;
+        newNode.prev = before;
+        after.prev = newNode;
+        length++;
+        return true;
+
+
+
+    }
     
 }
