@@ -50,7 +50,6 @@ public class Swap_first_last {
             head = last;
             tail = first;
 
-
         }else{
             System.out.println("nothing to swap");
         }
