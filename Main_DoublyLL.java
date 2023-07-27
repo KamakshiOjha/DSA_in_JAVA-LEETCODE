@@ -3,6 +3,7 @@ public class Main_DoublyLL {
         DoublyLL l = new DoublyLL(7);
         l.append(4);
         l.append(5);
+        l.append(6);
         // l.printLL();
         // System.out.println("element removed: " );
         // l.remove();
@@ -32,11 +33,22 @@ public class Main_DoublyLL {
         // System.out.println(l.insertElement(1, 25));
         // l.printLL();
 
-        System.out.println("before");
-        l.printLL();
+        // System.out.println("before");
+        // l.printLL();
+        // System.out.println("after");
+        // System.out.println(l.removeElement(1));
+        // l.printLL();
+
+        Reverse_DLL l1 = new Reverse_DLL(7);
+        l1.append(4);
+        l1.append(5);
+        l1.append(6);
+
+         System.out.println("before");
+        l1.printLL();
         System.out.println("after");
-        System.out.println(l.removeElement(1));
-        l.printLL();
+        l1.reverse();
+        l1.printLL();
 
 
     }
