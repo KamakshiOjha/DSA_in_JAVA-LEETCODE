@@ -5,6 +5,9 @@ public class Stack_main {
         s.push(3);
         s.push(9);
         s.printStack();
+        System.out.println("after pop");
+        s.pop();
+        s.printStack();
 
     }
 }

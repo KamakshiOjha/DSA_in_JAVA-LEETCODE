@@ -22,6 +22,8 @@ public class Stack {
             temp = temp.next;
         }
     }
+
+// push element in stack
     public void push(int value){
         Node newNode = new Node(value);
         if(height == 0){
@@ -32,5 +34,18 @@ public class Stack {
             top = newNode;
         }
         height++;
+    }
+
+// pop element in stack
+    public void pop(){
+        if(height==0){
+            System.out.println("nothing to pop");
+        }
+        else{
+            Node temp;
+            temp = top;
+            top = top.next;
+            temp.next = null;
+        }height--;
     }
 }
