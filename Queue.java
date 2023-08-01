@@ -40,4 +40,24 @@ public class Queue {
         }
         length ++;
     }
+    //remove element from queue
+    public void dequeue(){
+        if(length == 0){
+            first = null;
+            last = null;
+            length = 0;
+        }
+        else if(length == 1){
+            first = null;
+            last = null;
+            length = 0;
+        }
+        else{
+            Node temp=first;
+            first = first.next;
+            temp.next = null;
+            length --;
+        }
+
+    }
 }

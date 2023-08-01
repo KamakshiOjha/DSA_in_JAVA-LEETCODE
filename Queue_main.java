@@ -4,5 +4,8 @@ public class Queue_main {
         q.enqueue(4);
         q.enqueue(5);
         q.printQueue();
+        q.dequeue();
+        System.out.println("after dequeue");
+        q.printQueue();
     }
 }
