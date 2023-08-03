@@ -42,6 +42,7 @@ public class Reverse_DLL {
         }
         length ++;
     }
+    //reverse
     public void reverse() {
         if (length == 0) {
             System.out.println("null");

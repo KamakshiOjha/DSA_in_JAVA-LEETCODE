@@ -9,7 +9,6 @@ public class Swap_first_last {
         tail = newNode;
         length = 1;
 
-
     }
     class Node {
         int value;
