@@ -1,3 +1,4 @@
+//check whether an array is sorted or not[Strivers sheet] - step3
 public class Sorted_array {
     public static void main(String[] args) {
         int arr[] = {9,2,5,7,9,10};
