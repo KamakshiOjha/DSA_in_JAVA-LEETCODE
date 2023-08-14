@@ -28,4 +28,13 @@ public class Hash_tables {
             }
         }
     }
+
+    private int hash(String key){
+        int hash =0;
+        char[] keychars= key.toCharArray();
+        for(int i =0;i<keychars.length;i++){
+            int asciivalue = keychars[i];
+            hash = (hash+asciivalue *23)% dataMap.length;
+        } return hash;
+    }
 }
