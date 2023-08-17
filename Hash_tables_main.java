@@ -5,7 +5,9 @@ public class Hash_tables_main {
         h.set("banana", 5);
         h.set("life", 1);
 
-        h.printTable();
-
+        // h.printTable();
+        
+        System.out.println(h.get("banana"));
+        System.out.println(h.get("banana1"));
     }
 }
