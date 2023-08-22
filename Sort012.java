@@ -1,3 +1,4 @@
+//coding ninja
 public class Sort012 {
     public static void main(String[] args) {
         int[] arr = {0,1,2,2,1,0};
