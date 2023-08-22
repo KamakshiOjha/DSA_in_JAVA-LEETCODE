@@ -1,3 +1,4 @@
+//coding ninja
 public class String_palindrome {
     public static void main(String[] args) {
         String str = "c1 O$d@eeD o1c";
