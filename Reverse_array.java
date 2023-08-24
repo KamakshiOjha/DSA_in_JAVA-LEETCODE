@@ -1,4 +1,4 @@
-//coding ninja - reverse array at from a particular position.
+//coding ninja - Reverse array at from a particular position.
 
 import java.util.ArrayList;
 
