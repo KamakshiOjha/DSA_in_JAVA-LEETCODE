@@ -1,3 +1,4 @@
+//coding ninja - Product Of Array Except Self
 public class Product_Of_Array_Except_Self {
     public static void main(String[] args) {
         int[] arr = {1,2,3};
