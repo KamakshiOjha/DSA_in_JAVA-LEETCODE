@@ -1,3 +1,4 @@
+//linear search
 public class Linear_search {
     public static void main(String[] args){
         int[] array = {10,20,30,-11,15,26};
