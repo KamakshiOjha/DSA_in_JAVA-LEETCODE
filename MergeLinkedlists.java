@@ -1,7 +1,7 @@
 public class MergeLinkedlists {
     public static void main(String[] args) {
-        ListNode []list1 = [1,2,4];
-        ListNode[] list2 = [1,3,4];
+        ListNode []list1 = {1,2,4};
+        ListNode[] list2 = {1,3,4};
     }
     class ListNode{
         int value;

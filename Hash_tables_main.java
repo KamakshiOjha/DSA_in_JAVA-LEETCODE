@@ -9,5 +9,6 @@ public class Hash_tables_main {
         
         System.out.println(h.get("banana"));
         System.out.println(h.get("banana1"));
+        System.out.println(h.Keys());
     }
 }

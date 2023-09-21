@@ -1,9 +1,11 @@
+import java.util.ArrayList;
+
 public class Hash_tables {
     private int size = 7;
     private Node[] dataMap;
 
     public Hash_tables(){
-        dataMap = new Node[size];
+        dataMap = new Node[size]; // array
     }
 
     public class Node{
@@ -31,12 +33,14 @@ public class Hash_tables {
 
     private int hash(String key){
         int hash =0;
-        char[] keychars= key.toCharArray();
+        char[] keychars= key.toCharArray();//array - tochararry - putting in array
         for(int i =0;i<keychars.length;i++){
             int asciivalue = keychars[i];
-            hash = (hash+asciivalue *23)% dataMap.length;
-        } return hash;
+            hash = (hash+asciivalue *23)% dataMap.length;//23 is prime no so number we get is random , datmap length is 7
+        } 
+        return hash;
     }
+    
     public void set(String key,int value){
         int index = hash(key);
         Node newNode = new Node(key, value);
@@ -55,9 +59,22 @@ public class Hash_tables {
         int index = hash(key);
         Node temp = dataMap[index];
         while(temp != null){
-            if(key == temp.key){
+            if(temp.key == key){
                 return temp.value;
             }temp = temp.next;
         }return 0;
+    }
+
+    public ArrayList Keys(){
+        ArrayList<String> allkeys = new ArrayList<>();
+        for(int i = 0;i<dataMap.length;i++){
+            Node temp = dataMap[i];
+            while(temp != null){
+                allkeys.add(temp.key);
+                temp = temp.next;
+            }
+
+        }
+        return allkeys;
     }
 }
