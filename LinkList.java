@@ -198,6 +198,22 @@ public void removeElement(int index){
         length= 1;
     }
 
+    // public void Find_Duplicate(){
+    //     int []arr = new int[length];
+    //     Node temp = head;
+    //     Node pre = head;
+    //     arr[0] = temp.value;
+    //     while(temp !=null){
+
+    //         for(int i = 0;i<length;i++){
+    //             if(arr[0] == null){
+
+    //             }
+    //         }
+    //     }
+
+    // }
+
 
 
 }
