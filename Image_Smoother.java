@@ -33,4 +33,31 @@ public class Image_Smoother {
 
         return result;
     }
+//optimised solution
+//     public static int[][] imageSmoother(int[][] img) {
+//         int row = img.length;
+//         int column = img[0].length;
+//         // int[][] result = new int[row][column];
+//         for(int r = 0;r<row;r++){
+//             for(int c = 0;c<column;c++){
+//                 int total = 0;
+//                 int count = 0;
+//                 for(int i = r-1;i<=r+1;i++){
+//                     for(int j = c-1;j<=c+1;j++){
+//                         if(i<0 || i == row || j<0 || j==column){
+//                             continue;
+//                         }
+//                         total = total+img[i][j] % 256;
+//                         count++;
+//                     }
+//                 }
+//                 img[r][c] = img[r][c] ^ (total / count) << 8;
+//             }
+//         }
+//         for(int r = 0;r<row;r++){
+//             for(int c = 0;c<column;c++){
+//                 img[r][c] = img[r][c]>>8;
+//             }}
+//         return img;
+//     }
 }
