@@ -1,6 +1,7 @@
 //leetcode - Contains Duplicate II
 //this is might be wrong for some testcase.
 
+
 public class Contains_Duplicate_II {
     public static void main(String[] args) {
         int[] nums = {1,2,3,1};
