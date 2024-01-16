@@ -75,4 +75,33 @@ public class Zero_or_One_Losses {
     //     arr.add(part2);
     //     return arr;
     // }
+
+    //more optimised :
+    // public List<List<Integer>> findWinners(int[][] matches) {
+    //     List<List<Integer>> arr = new ArrayList();
+    //     HashMap<Integer,Integer> loss = new HashMap<>();
+    //     int row = matches.length;
+    //     int colm = matches[0].length;
+    //     for(int i = 0;i<row;i++){
+    //         loss.put(matches[i][1],loss.getOrDefault(matches[i][1], 0) + 1);
+    //     }
+    //     List<Integer> part1 = new ArrayList();
+    //     List<Integer> part2 = new ArrayList();
+    //     for(int i =0;i<row;i++){
+    //         int val = matches[i][0];
+    //         if(!loss.containsKey(val) && !part1.contains(val) ){
+    //             part1.add(matches[i][0]);
+    //         }
+    //     }
+    //     for (Map.Entry<Integer, Integer> entry : loss.entrySet()){
+    //         if(entry.getValue().equals(1)){
+    //             part2.add(entry.getKey());
+    //         }
+    //     }
+    //     Collections.sort(part1);
+    //     Collections.sort(part2);
+    //     arr.add(part1);
+    //     arr.add(part2);
+    //     return arr;
+    // }
 }
