@@ -2,7 +2,6 @@ class Solution {
     public int[] sortJumbled(int[] mapping, int[] nums) {
          int n = nums.length;
         int map_n = 0;
-        ArrayList<Integer> mapped = new ArrayList<>();
         List<int[]> numPairs = new ArrayList<>();
         for(int i =0;i<n;i++){
             String numStr = Integer.toString(nums[i]);
@@ -13,7 +12,6 @@ class Solution {
                 map_n += mapping[a];
                 
             }
-            mapped.add(map_n);
             numPairs.add(new int[]{map_n, i});
         }
         Collections.sort(numPairs, (a, b) -> Integer.compare(a[0], b[0]));
