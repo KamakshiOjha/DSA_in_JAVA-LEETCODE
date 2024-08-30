@@ -1,0 +1,24 @@
+class Solution {
+    public int distributeCookies(int[] cookies, int k) {
+        int []child = new int[k];
+        return solve(0,cookies,child,k);
+    }
+    public static int solve(int i, int[] cookies,int child[],int k){
+        if(i>=n){
+            int unfair = Integer.MIN_VALUE;
+            for(int s = 0;s<child.length;s++){
+                unfair = Math.max(unfair,child[s]);
+            }
+            return unfair;
+        }
+
+        int res = Integer.MAX_VALUE;
+        int cook = cookies[i];
+        for(int j = 0;j<k;j++){
+            child[j] += cook;
+            res = Math.min(res,solve(i+1,cookies,child,k));
+            child[j] -= cook;
+        }
+        return res;
+    }
+}
