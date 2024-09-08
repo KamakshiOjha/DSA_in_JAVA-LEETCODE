@@ -1,0 +1,97 @@
+// /**
+//  * Definition for singly-linked list.
+//  * public class ListNode {
+//  *     int val;
+//  *     ListNode next;
+//  *     ListNode() {}
+//  *     ListNode(int val) { this.val = val; }
+//  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+//  * }
+//  */
+// class Solution {
+//     public ListNode[] splitListToParts(ListNode head, int k) {
+//         ListNode temp = head;
+//         ListNode pre = head;
+//         ListNode[] arr = new ListNode[k];
+//         int count = 0;
+//         while(temp!=null){
+//             count++;
+//             temp = temp.next;
+//         }
+//         temp = head;
+//         int i = 0;
+//         if(count < k){
+//             while(temp!= null){
+//                 arr[i] = temp;
+//                 temp = temp.next;
+//                 pre.next = null;
+//                 pre = temp;
+//                 i++;
+//             }
+//             while(i<k){
+//             arr[i] = null;
+//         }
+//         }
+//         else{
+//             int mid = count/k;
+//             int extra = count % k;
+//             while(temp!=null && i < k){
+//                 arr[i] = temp;
+//                 int part = mid + (extra > 0 ? 1 : 0);
+//                 for(int j = 0;j<part-1;j++){
+//                     temp = temp.next;
+//                 }
+//                 pre = temp.next;
+//                 temp.next = null;
+//                 temp = pre;
+//                 i++;
+//                 extra--;
+//             }
+//         }
+        
+//         return arr;
+
+//     }
+// }
+
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ * int val;
+ * ListNode next;
+ * ListNode() {}
+ * ListNode(int val) { this.val = val; }
+ * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
+class Solution {
+    public ListNode[] splitListToParts(ListNode head, int k) {
+        ListNode temp = head;
+        ListNode pre = head;
+        ListNode[] arr = new ListNode[k];
+        int count = 0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        temp = head;
+        int i = 0;
+        int mid = count / k;
+        int extra = count % k;
+        while (temp != null && i < k) {
+            arr[i] = temp;
+            int part = mid + (extra > 0 ? 1 : 0);
+            for (int j = 0; j < part - 1; j++) {
+                temp = temp.next;
+            }
+            pre = temp.next;
+            temp.next = null;
+            temp = pre;
+            i++;
+            extra--;
+        }
+
+        return arr;
+
+    }
+}
